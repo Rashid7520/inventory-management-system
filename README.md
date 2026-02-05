@@ -165,9 +165,9 @@ This project demonstrates:
 
 ## 👤 Author
 
-**Mohammad Rashid Nazir**
-**Arun Mandava**
-**Sneh Jain**
-**Tejus Sharma**
-**Gargee Kataria**
-Inventory Management System – Mini Project
+- **Mohammad Rashid Nazir**
+- **Arun Mandava**
+- **Sneh Jain**
+- **Tejus Sharma**
+- **Gargee Kataria**
+- Inventory Management System – Mini Project
