@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h2>Inventory Update</h2>
+
+<div class="card form-card">
+    <form method="POST">
+
+        <label>Product</label>
+        <select name="product_id" required>
+            {% for p in products %}
+            <option value="{{ p.id }}">{{ p.name }}</option>
+            {% endfor %}
+        </select>
+
+        <label>Quantity</label>
+        <input name="quantity" type="number" placeholder="Enter quantity" required>
+
+        <label>Action</label>
+        <select name="action" required>
+            <option value="IN">➕ Stock IN</option>
+            <option value="OUT">➖ Stock OUT</option>
+        </select>
+
+        <button type="submit">Update Inventory</button>
+
+    </form>
+</div>
+
+{% endblock %}

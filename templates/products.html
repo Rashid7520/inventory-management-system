@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h2>Products</h2>
+
+<div class="card form-card">
+    <h3>Add New Product</h3>
+
+    <form method="POST">
+        <label>Product Name</label>
+        <input name="name" placeholder="e.g. Laptop" required>
+
+        <label>Category</label>
+        <input name="category" placeholder="e.g. Electronics">
+
+        <label>Minimum Stock</label>
+        <input name="min_stock" type="number" placeholder="e.g. 10">
+
+        <button type="submit">Add Product</button>
+    </form>
+</div>
+
+<div class="card">
+    <h3>Product List</h3>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Min Stock</th>
+            <th>Actions</th>
+        </tr>
+
+        {% for p in products %}
+        <tr>
+            <td>{{ p.name }}</td>
+            <td>{{ p.category }}</td>
+            <td>{{ p.min_stock }}</td>
+            <td>
+                <a class="action-link edit" href="/edit_product/{{ p.id }}">Edit</a>
+                <a class="action-link delete"
+                   href="/delete_product/{{ p.id }}"
+                   onclick="return confirm('Delete this product?')">
+                   Delete
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h2>Transaction History</h2>
+
+<div class="card">
+    <table>
+        <tr>
+            <th>Product ID</th>
+            <th>Change</th>
+            <th>Type</th>
+            <th>User</th>
+            <th>Time</th>
+        </tr>
+
+        {% for t in tx %}
+        <tr>
+            <td>{{ t.product_id }}</td>
+            <td>{{ t.change }}</td>
+            <td>
+                {% if t.type == "IN" %}
+                    <span class="badge in">IN</span>
+                {% else %}
+                    <span class="badge out">OUT</span>
+                {% endif %}
+            </td>
+            <td>{{ t.user }}</td>
+            <td>{{ t.time }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}

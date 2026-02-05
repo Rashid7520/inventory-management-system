@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h2>Edit Product</h2>
+
+<div class="card form-card">
+    <form method="POST">
+
+        <label>Product Name</label>
+        <input name="name" value="{{ product.name }}" required>
+
+        <label>Category</label>
+        <input name="category" value="{{ product.category }}">
+
+        <label>Minimum Stock Level</label>
+        <input name="min_stock" type="number" value="{{ product.min_stock }}">
+
+        <button type="submit">Update Product</button>
+
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h2>Inventory Analytics</h2>
+
+<div class="analytics-grid">
+
+    <div class="card">
+        <h3>📦 Stock Levels by Product</h3>
+        <canvas id="stockChart"></canvas>
+    </div>
+
+    <div class="card">
+        <h3>🔄 Stock Movement</h3>
+        <canvas id="movementChart"></canvas>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+const stockCtx = document.getElementById('stockChart');
+new Chart(stockCtx, {
+    type: 'bar',
+    data: {
+        labels: {{ product_names | tojson }},
+        datasets: [{
+            label: 'Stock Levels',
+            data: {{ stock_levels | tojson }},
+            backgroundColor: 'rgba(37, 99, 235, 0.7)'
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: { display: false }
+        }
+    }
+});
+
+const movementCtx = document.getElementById('movementChart');
+new Chart(movementCtx, {
+    type: 'pie',
+    data: {
+        labels: ['Stock IN', 'Stock OUT'],
+        datasets: [{
+            data: [{{ in_count }}, {{ out_count }}],
+            backgroundColor: ['#22c55e', '#ef4444']
+        }]
+    },
+    options: {
+        responsive: true
+    }
+});
+</script>
+
+{% endblock %}

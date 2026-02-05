@@ -1,0 +1,247 @@
+/* -------- GLOBAL -------- */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f5f7fb;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* -------- NAVBAR -------- */
+.navbar {
+    background: #1f2937;
+    padding: 12px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-right a {
+    color: #e5e7eb;
+    margin-left: 18px;
+    font-size: 14px;
+}
+
+.nav-right a:hover {
+    color: #fff;
+}
+
+.logout {
+    color: #f87171;
+}
+
+/* -------- CONTAINER -------- */
+.container {
+    width: 85%;
+    margin: 30px auto;
+}
+
+/* -------- CARDS -------- */
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    margin-bottom: 20px;
+}
+
+/* -------- ALERT -------- */
+.alert {
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+/* -------- TABLE -------- */
+table {
+    width: 100%;
+    background: white;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background: #f1f5f9;
+    text-align: left;
+    padding: 12px;
+    font-size: 14px;
+}
+
+td {
+    padding: 12px;
+    border-top: 1px solid #e5e7eb;
+}
+
+tr:hover {
+    background: #f9fafb;
+}
+
+/* -------- FORM -------- */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+/* -------- LOGIN -------- */
+.auth-body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(120deg, #2563eb, #1e40af);
+}
+
+.auth-card {
+    background: white;
+    padding: 35px;
+    width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.auth-card h2 {
+    margin-bottom: 5px;
+}
+
+.auth-subtitle {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+
+/* -------- DASHBOARD -------- */
+.dashboard-grid,
+.analytics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.list {
+    padding-left: 18px;
+}
+
+.list li {
+    margin-bottom: 8px;
+}
+
+.muted {
+    color: #6b7280;
+}
+
+/* -------- FORMS -------- */
+.form-card {
+    max-width: 500px;
+}
+
+label {
+    font-size: 13px;
+    margin-top: 12px;
+    display: block;
+    color: #374151;
+}
+/* -------- ACTION LINKS -------- */
+.action-link {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.action-link.edit {
+    color: #2563eb;
+}
+
+.action-link.delete {
+    color: #dc2626;
+    margin-left: 8px;
+}
+
+.action-link:hover {
+    text-decoration: underline;
+}
+
+/* -------- HEADINGS -------- */
+h2 {
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+/* -------- BADGES -------- */
+.badge {
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge.in {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.badge.out {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.badge.low {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.badge.ok {
+    background: #dcfce7;
+    color: #166534;
+}
+
+/* -------- BUTTON VARIANTS -------- */
+.secondary-btn {
+    background: #10b981;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.secondary-btn:hover {
+    background: #059669;
+}
+

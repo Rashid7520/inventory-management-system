@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h2>Stock Overview</h2>
+
+<div class="card">
+    <a href="/export_stock_csv">
+        <button class="secondary-btn">⬇ Download CSV</button>
+    </a>
+</div>
+
+<div class="card">
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Category</th>
+            <th>Quantity</th>
+            <th>Min Stock</th>
+            <th>Status</th>
+        </tr>
+
+        {% for item in stock_data %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.category }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>{{ item.min_stock }}</td>
+            <td>
+                {% if item.status == "LOW" %}
+                    <span class="badge low">LOW</span>
+                {% else %}
+                    <span class="badge ok">OK</span>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}

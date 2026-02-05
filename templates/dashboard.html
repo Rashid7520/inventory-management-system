@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h2>Dashboard</h2>
+
+<div class="dashboard-grid">
+    <div class="card">
+        <h3>⚠ Low Stock Alerts</h3>
+
+        {% if low_stock %}
+        <ul class="list">
+            {% for item in low_stock %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p class="muted">No low stock items 🎉</p>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
